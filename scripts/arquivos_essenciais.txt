@@ -1,0 +1,35 @@
+# CORE ESSENCIAL
+core/main_final.py
+core/database.py
+core/config.py
+core/logger.py
+
+# MODELOS ESSENCIAIS
+models/base.py
+models/configuracao_imobiliaria.py
+models/imovel_dual.py
+models/lead_crm_integrado.py
+models/tipos_garantia.py
+
+# SERVICES ESSENCIAIS
+services/matching/geo_matching.py
+services/crm_integration/crm_connector.py
+services/automation/daily_automation.py
+services/automation/carol_automation.py
+services/ai_agents/agents/carol_ai.py
+services/xml_import/xml_import_dual.py
+
+# APIs ESSENCIAIS
+api/matching_endpoints.py
+api/crm_endpoints.py
+api/carol_endpoints.py
+api/xml_import_endpoints.py
+api/automation_endpoints.py
+
+# TEMPLATES ESSENCIAIS
+templates/pages/dashboard.html
+templates/pages/galeria.html
+
+# SCRIPTS ESSENCIAIS
+scripts/init_fase1.py
+scripts/criar_leads_teste.py

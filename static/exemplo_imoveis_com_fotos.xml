@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imoveis>
+    <imovel id="1001">
+        <codigo>IMV001</codigo>
+        <titulo>Apartamento 3 quartos no Centro</titulo>
+        <tipo>apartamento</tipo>
+        <categoria>venda</categoria>
+        <preco>480000.00</preco>
+        <endereco>Rua das Flores, 123</endereco>
+        <bairro>Centro</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <area_total>85.5</area_total>
+        <quartos>3</quartos>
+        <banheiros>2</banheiros>
+        <vagas>1</vagas>
+        <descricao>Lindo apartamento com vista para o parque, totalmente reformado</descricao>
+        <fotos>https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800,https://images.unsplash.com/photo-1560449752-2dd9b957a5b1?w=800,https://images.unsplash.com/photo-1560448075-bb485b067938?w=800</fotos>
+        <status>ativo</status>
+    </imovel>
+    <imovel id="1002">
+        <codigo>IMV002</codigo>
+        <titulo>Casa 4 quartos com piscina</titulo>
+        <tipo>casa</tipo>
+        <categoria>venda</categoria>
+        <preco>750000.00</preco>
+        <endereco>Rua dos Jardins, 456</endereco>
+        <bairro>Jardins</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <area_total>200.0</area_total>
+        <quartos>4</quartos>
+        <banheiros>3</banheiros>
+        <vagas>2</vagas>
+        <descricao>Casa espaçosa com piscina, churrasqueira e jardim</descricao>
+        <fotos>https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800,https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800,https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800,https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=800</fotos>
+        <status>ativo</status>
+    </imovel>
+</imoveis>

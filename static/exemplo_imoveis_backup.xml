@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imoveis>
+    <imovel id="1001">
+        <codigo>IMV001</codigo>
+        <titulo>Apartamento 3 quartos no Centro</titulo>
+        <tipo>apartamento</tipo>
+        <categoria>venda</categoria>
+        <preco>450000.00</preco>
+        <endereco>Rua das Flores, 123</endereco>
+        <bairro>Centro</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <cep>01234-567</cep>
+        <area_total>85.5</area_total>
+        <quartos>3</quartos>
+        <banheiros>2</banheiros>
+        <vagas>1</vagas>
+        <descricao>Lindo apartamento com vista para o parque</descricao>
+        <fotos>https://exemplo.com/foto1.jpg,https://exemplo.com/foto2.jpg</fotos>
+        <status>ativo</status>
+    </imovel>
+    <imovel id="1002">
+        <codigo>IMV002</codigo>
+        <titulo>Casa 4 quartos com piscina</titulo>
+        <tipo>casa</tipo>
+        <categoria>venda</categoria>
+        <preco>750000.00</preco>
+        <endereco>Rua dos Jardins, 456</endereco>
+        <bairro>Jardins</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <cep>01234-890</cep>
+        <area_total>200.0</area_total>
+        <quartos>4</quartos>
+        <banheiros>3</banheiros>
+        <vagas>2</vagas>
+        <descricao>Casa ampla com piscina e churrasqueira</descricao>
+        <fotos>https://exemplo.com/casa1.jpg,https://exemplo.com/casa2.jpg</fotos>
+        <status>ativo</status>
+    </imovel>
+    <imovel id="1003">
+        <codigo>IMV003</codigo>
+        <titulo>Terreno comercial 500m²</titulo>
+        <tipo>terreno</tipo>
+        <categoria>venda</categoria>
+        <preco>300000.00</preco>
+        <endereco>Avenida Principal, 789</endereco>
+        <bairro>Industrial</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <cep>01234-123</cep>
+        <area_total>500.0</area_total>
+        <quartos>0</quartos>
+        <banheiros>0</banheiros>
+        <vagas>0</vagas>
+        <descricao>Terreno ideal para comércio</descricao>
+        <fotos>https://exemplo.com/terreno1.jpg</fotos>
+        <status>ativo</status>
+    </imovel>
+</imoveis>

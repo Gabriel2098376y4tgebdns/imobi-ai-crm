@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imoveis>
+    <!-- IMÓVEL PARA VENDA -->
+    <imovel>
+        <codigo>VENDA001</codigo>
+        <tipo_operacao>venda</tipo_operacao>
+        <titulo>Apartamento 3 quartos - Venda</titulo>
+        <descricao>Lindo apartamento para venda no centro da cidade</descricao>
+        <endereco>Rua das Flores, 123</endereco>
+        <bairro>Centro</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <cep>01234-567</cep>
+        <latitude>-23.550520</latitude>
+        <longitude>-46.633308</longitude>
+        <tipo>apartamento</tipo>
+        <quartos>3</quartos>
+        <banheiros>2</banheiros>
+        <suites>1</suites>
+        <vagas>1</vagas>
+        <area_total>85.5</area_total>
+        <preco>480000.00</preco>
+        <aceita_financiamento>sim</aceita_financiamento>
+        <aceita_pets>sim</aceita_pets>
+        <fotos>
+            <foto>https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800</foto>
+            <foto>https://images.unsplash.com/photo-1560449752-2dd9b957a5b1?w=800</foto>
+        </fotos>
+    </imovel>
+    
+    <!-- IMÓVEL PARA LOCAÇÃO -->
+    <imovel>
+        <codigo>LOCACAO001</codigo>
+        <tipo_operacao>locacao</tipo_operacao>
+        <titulo>Casa 4 quartos - Locação</titulo>
+        <descricao>Casa espaçosa para locação com piscina</descricao>
+        <endereco>Rua dos Jardins, 456</endereco>
+        <bairro>Jardins</bairro>
+        <cidade>São Paulo</cidade>
+        <estado>SP</estado>
+        <cep>01234-890</cep>
+        <latitude>-23.560520</latitude>
+        <longitude>-46.643308</longitude>
+        <tipo>casa</tipo>
+        <quartos>4</quartos>
+        <banheiros>3</banheiros>
+        <suites>2</suites>
+        <vagas>2</vagas>
+        <area_total>200.0</area_total>
+        <valor_aluguel>3500.00</valor_aluguel>
+        <valor_condominio>450.00</valor_condominio>
+        <valor_iptu>280.00</valor_iptu>
+        <mobiliado>semi</mobiliado>
+        <aceita_pets>sim</aceita_pets>
+        <disponivel_em>2025-08-01</disponivel_em>
+        <fotos>
+            <foto>https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800</foto>
+            <foto>https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800</foto>
+        </fotos>
+    </imovel>
+</imoveis>

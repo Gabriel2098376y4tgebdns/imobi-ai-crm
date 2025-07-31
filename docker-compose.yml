@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  # API Principal
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://imobi_user:imobi_pass@db:5432/imobi_ai
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+    volumes:
+      - .:/app
+      - logs_data:/app/logs
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # Worker Celery
+  worker:
+    build: .
+    command: celery -A core.celery_app worker --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://imobi_user:imobi_pass@db:5432/imobi_ai
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+    volumes:
+      - .:/app
+      - logs_data:/app/logs
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # Scheduler Celery
+  scheduler:
+    build: .
+    command: celery -A core.celery_app beat --loglevel=info
+    environment:
+      - DATABASE_URL=postgresql://imobi_user:imobi_pass@db:5432/imobi_ai
+      - REDIS_URL=redis://redis:6379/0
+      - ENVIRONMENT=development
+    volumes:
+      - .:/app
+      - logs_data:/app/logs
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # PostgreSQL
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=imobi_ai
+      - POSTGRES_USER=imobi_user
+      - POSTGRES_PASSWORD=imobi_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./deploy/sql:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  # Redis
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # Flower (Monitor Celery)
+  flower:
+    build: .
+    command: celery -A core.celery_app flower --port=5555
+    ports:
+      - "5555:5555"
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  logs_data:

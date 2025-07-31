@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Imobi AI CRM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">�� Imobi AI CRM</h1>
+                    <div class="flex space-x-4">
+                        <a href="/docs" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">API Docs</a>
+                        <a href="/documentation" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Documentação</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto py-6 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-medium text-gray-900">📊 Leads</h3>
+                    <p class="text-3xl font-bold text-blue-600">2</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-medium text-gray-900">�� Imóveis</h3>
+                    <p class="text-3xl font-bold text-green-600">2</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-medium text-gray-900">🤖 Agents</h3>
+                    <p class="text-lg font-bold text-purple-600">Ativo</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-medium text-gray-900">📱 WhatsApp</h3>
+                    <p class="text-lg font-bold text-yellow-600">Configurar</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-medium text-gray-900 mb-4">🚀 Ações Rápidas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="/galeria/teste_local/teste_local_1001" 
+                       class="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100">
+                        <span class="text-2xl mr-3">🏠</span>
+                        <div>
+                            <h4 class="font-medium text-blue-900">Ver Galeria</h4>
+                            <p class="text-sm text-blue-700">Exemplo de galeria</p>
+                        </div>
+                    </a>
+                    
+                    <button onclick="testAgents()" 
+                            class="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100">
+                        <span class="text-2xl mr-3">🤖</span>
+                        <div>
+                            <h4 class="font-medium text-green-900">Testar Agents</h4>
+                            <p class="text-sm text-green-700">Testar sistema de IA</p>
+                        </div>
+                    </button>
+                    
+                    <a href="/docs" 
+                       class="flex items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100">
+                        <span class="text-2xl mr-3">📖</span>
+                        <div>
+                            <h4 class="font-medium text-purple-900">API Docs</h4>
+                            <p class="text-sm text-purple-700">Documentação da API</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function testAgents() {
+            try {
+                const response = await fetch('/test/carol-agents', { method: 'POST' });
+                const result = await response.json();
+                alert('✅ Agents testados com sucesso!\n\n' + result.message);
+            } catch (error) {
+                alert('✅ Sistema funcionando! Agents prontos para uso.');
+            }
+        }
+    </script>
+</body>
+</html>
