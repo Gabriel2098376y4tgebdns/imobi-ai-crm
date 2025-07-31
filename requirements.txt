@@ -68,7 +68,6 @@ humanize==4.12.3
 hyperframe==6.1.0
 identify==2.6.12
 idna==3.10
--e git+https://github.com/Gabriel2098376y4tgebdns/imobi-ai-crm.git@a2a07b7940f69022d22e518227ae39fd5d2c5be4#egg=imobi_ai_crm
 importlib_metadata==8.7.0
 importlib_resources==6.5.2
 iniconfig==2.1.0
