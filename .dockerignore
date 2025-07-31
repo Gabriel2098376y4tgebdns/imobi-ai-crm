@@ -1,0 +1,74 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Documentação
+README.md
+docs/
+*.md
+
+# Testes
+tests/
+test_*
+*_test.py
+
+# Arquivos temporários
+tmp/
+temp/
+.tmp/
+
+# Arquivos de exemplo
+examples/
+static/exemplo_*
+static/test-data/
+
+# Scripts não essenciais
+scripts/
+migrations/
+
+# Templates (se não usados em produção)
+templates/
+
+# Arquivos de configuração local
+.env*
+*.env
+config.local.*
+
+# Poetry (usando requirements.txt)
+poetry.lock
+pyproject.toml
+
+# Outros
+*.bak
+*.backup
+*.orig
