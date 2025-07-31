@@ -1,29 +1,21 @@
-FROM python:3.11-alpine
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Instalar apenas dependências essenciais
-RUN apk add --no-cache \
+# Instalar dependências do sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
-    musl-dev \
-    postgresql-dev \
-    git
+    git \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copiar requirements primeiro (para cache)
+# Copiar requirements e instalar dependências
 COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Instalar dependências Python e limpar cache
-RUN pip install --no-cache-dir -r requirements.txt && \
-    pip cache purge
-
-# Copiar apenas arquivos essenciais
-COPY main.py .
-COPY core/ ./core/
-COPY models/ ./models/
-COPY services/ ./services/
-COPY api/ ./api/
-COPY config/ ./config/
-COPY utils/ ./utils/
+# Copiar todo o código (com .dockerignore filtrando)
+COPY . .
 
 # Expor porta
 EXPOSE 8000
